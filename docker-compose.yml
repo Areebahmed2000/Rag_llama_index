@@ -1,0 +1,52 @@
+# version: "3.9"
+
+# services:
+#   fastapi-app:
+#     build: .
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - ./app:/app
+#     environment:
+#       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+#       - WEAVIATE_URL=${WEAVIATE_URL}
+#       - WEAVIATE_API_KEY=${WEAVIATE_API_KEY}
+#     depends_on:
+#       - weaviate
+
+#   weaviate:
+#     image: semitechnologies/weaviate:latest
+#     environment:
+#       - QUERY_DEFAULTS_LIMIT=20
+#       - WEAVIATE_AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+#       - WEAVIATE_API_KEY=${WEAVIATE_API_KEY}
+#     ports:
+#       - "8080:8080"
+#     restart: always
+
+
+
+version: '3.8'
+
+services:
+  rag-app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - WEAVIATE_URL=${WEAVIATE_URL}
+      - WEAVIATE_API_KEY=${WEAVIATE_API_KEY}
+    volumes:
+      - ./app:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    driver: bridge

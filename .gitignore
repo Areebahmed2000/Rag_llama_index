@@ -1,0 +1,368 @@
+# 🤖 Agentic RAG System - Git Ignore File
+
+# ==============================================================================
+# ENVIRONMENT & SECRETS
+# ==============================================================================
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+config/secrets.py
+
+# ==============================================================================
+# PYTHON
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Celery beat schedule file
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ==============================================================================
+# DEVELOPMENT TOOLS
+# ==============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==============================================================================
+# OPERATING SYSTEM
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# APPLICATION SPECIFIC
+# ==============================================================================
+# Logs
+logs/
+*.log
+*.log.*
+log/
+logging/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+temporary/
+
+# Upload directories
+uploads/
+upload/
+data/uploads/
+static/uploads/
+
+# Cache directories
+cache/
+.cache/
+__cache__/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+database/
+db/
+
+# Backup files
+*.bak
+*.backup
+backup/
+backups/
+
+# ==============================================================================
+# DOCKER & CONTAINERS
+# ==============================================================================
+# Docker
+.dockerignore
+# ==============================================================================
+# AI/ML SPECIFIC
+# ==============================================================================
+# Model files
+models/
+*.model
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.pt
+*.pth
+checkpoints/
+
+# Note: Add specific data files you want to track with !filename.ext
+
+# ==============================================================================
+# WEB ASSETS
+# ==============================================================================
+# Node.js (if using any JS build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Static file builds
+build/
+dist/
+.next/
+out/
+
+# ==============================================================================
+# TESTING
+# ==============================================================================
+# Test outputs
+test-results/
+test_results/
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ==============================================================================
+# DOCUMENTATION
+# ==============================================================================
+# Documentation builds
+docs/_build/
+docs/build/
+site/
+
+# ==============================================================================
+# DEPLOYMENT
+# ==============================================================================
+# Kubernetes
+*.yaml.bak
+*.yml.bak
+k8s/secrets/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ==============================================================================
+# MONITORING & ANALYTICS
+# ==============================================================================
+# Metrics and monitoring
+metrics/
+monitoring/
+.prometheus/
+
+# ==============================================================================
+# SAMPLE FILES TO KEEP
+# ==============================================================================
+# Keep example/sample files
+!.env.example
+!sample.pdf
+!sample.csv
+!docs/examples/
+!tests/fixtures/
+
+# ==============================================================================
+# EDITOR CONFIGS TO KEEP
+# ==============================================================================
+# Keep editor configs that help team consistency
+!.editorconfig
+!.prettierrc
+!pyproject.toml
+!setup.cfg
+
+# ==============================================================================
+# CUSTOM EXCLUDES
+# ==============================================================================
+# Add any project-specific files to ignore below this line
+
+# Large checkpoint files
+*.ckpt
+*.checkpoint
+
+# API response caches
+api_cache/
+response_cache/
+
+# User-specific uploads (but keep structure)
+data/user_uploads/*
+!data/user_uploads/.gitkeep
+
+# Environment-specific configs
+config.local.py
+local_config.py
+
+# Compiled translations
+*.mo
+
+# Sphinx documentation
+docs/_build/
+
+# Package files
+*.dmg
+*.gz
+*.zip
+*.tar
+
+# IDE workspace files
+.history/
+
+# Custom scripts (optional - remove if you want to track them)
+scripts/personal/
+scripts/local/

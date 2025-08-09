@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+weaviate-client
+llama-index
+llama-index-vector-stores-weaviate
+llama-index-embeddings-gemini
+llama-index-llms-gemini
+python-dotenv
+PyPDF2
+pandas
+python-multipart
+aiofiles
+numpy
+openpyxl
